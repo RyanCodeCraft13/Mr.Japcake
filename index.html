@@ -3,130 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr. Japcakes</title>
+<title>Sakura Japcakes | Official</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-body{
-    background:#fff5f7;
-    color:#333;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fff5f7;color:#333;overflow-x:hidden;}
 
 /* HEADER */
 header{
     background:linear-gradient(90deg,#ff758c,#ff7eb3);
-    padding:20px;
-    text-align:center;
-    color:white;
+    padding:20px;text-align:center;color:white;
 }
-
-header h1{
-    font-size:40px;
-    font-weight:800;
-}
+header h1{font-size:38px;font-weight:800}
 
 /* HERO */
-.hero{
-    text-align:center;
-    padding:60px 20px;
-}
-
-.hero button{
-    padding:12px 25px;
-    background:#ff4f81;
-    border:none;
-    color:white;
-    font-weight:600;
-    border-radius:25px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.hero button:hover{
-    background:#e63b6d;
-}
+.hero{text-align:center;padding:50px 20px;}
+.hero h2{font-size:30px;margin-bottom:10px}
+.hero p{margin-bottom:20px}
 
 /* PRODUCTS */
-.products{
-    padding:50px 20px;
-    text-align:center;
-}
-
+.products{text-align:center;padding:40px 20px}
 .product-container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
+    display:flex;flex-wrap:wrap;justify-content:center;gap:20px;
 }
-
 .card{
-    background:white;
-    width:250px;
-    padding:20px;
-    border-radius:15px;
+    background:white;width:250px;padding:20px;border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
     transition:0.3s;
 }
-
-.card:hover{
-    transform:translateY(-10px);
+.card:hover{transform:translateY(-8px);}
+.card img{width:100%;border-radius:10px;}
+.card h3{margin:10px 0}
+.price{color:#ff4f81;font-weight:600}
+.card button{
+    background:#ff4f81;color:white;border:none;
+    padding:8px 15px;border-radius:20px;cursor:pointer;
 }
 
-.card img{
-    width:100%;
-    border-radius:10px;
+/* CART */
+.cart{
+    background:white;margin:40px auto;padding:20px;
+    width:90%;max-width:500px;border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.cart h2{text-align:center;margin-bottom:15px}
+.cart ul{list-style:none;margin-bottom:15px}
+.cart li{margin-bottom:5px}
+.total{font-weight:700;color:#ff4f81}
+
+/* ORDER FORM */
+.order-form{
+    background:#ffe4ec;padding:40px 20px;text-align:center;
+}
+.order-form input, .order-form textarea{
+    width:90%;max-width:400px;
+    padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ccc;
+}
+.order-form button{
+    background:#ff4f81;color:white;border:none;
+    padding:10px 20px;border-radius:20px;cursor:pointer;
 }
 
-.price{
-    color:#ff4f81;
-    font-weight:600;
-}
-
-/* GCASH SECTION */
-.gcash{
-    background:white;
-    padding:60px 20px;
-    text-align:center;
-}
-
+/* GCASH */
+.gcash{text-align:center;padding:40px}
 .gcash img{
-    width:250px;
-    margin:20px 0;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    width:220px;margin:15px 0;border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
-.gcash h2{
-    margin-bottom:15px;
+/* ADMIN */
+.admin{
+    background:white;padding:30px;margin:30px;
+    border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
-
-/* CONTACT */
-.contact{
-    background:#ffe4ec;
-    padding:50px 20px;
-    text-align:center;
-}
+.admin input{padding:5px;margin:5px}
 
 /* FOOTER */
 footer{
-    background:#ff758c;
-    text-align:center;
-    padding:15px;
-    color:white;
+    background:#ff758c;text-align:center;
+    padding:15px;color:white;margin-top:40px;
 }
 
-@media(max-width:768px){
-    .product-container{
-        flex-direction:column;
-        align-items:center;
-    }
+/* Sakura Animation */
+.sakura{
+    position:fixed;
+    top:-10px;
+    color:#ffb7c5;
+    font-size:20px;
+    animation:fall linear infinite;
+}
+@keyframes fall{
+    to{transform:translateY(110vh);}
 }
 </style>
 </head>
@@ -134,68 +102,115 @@ footer{
 <body>
 
 <header>
-    <h1>🍡 Mr. Japcakes</h1>
+    <h1>🍡 Sakura Japcakes</h1>
     <p>Soft • Fluffy • Authentic Japanese Inspired Cakes</p>
 </header>
 
 <section class="hero">
     <h2>Experience the Taste of Japan 🇯🇵</h2>
-    <p>Freshly baked japcakes made with love.</p>
-    <button onclick="orderNow()">Order Now</button>
+    <p>Order now and enjoy premium japcakes!</p>
 </section>
 
 <section class="products">
-    <h2>Our Best Sellers</h2>
+    <h2>Our Products</h2>
     <div class="product-container">
 
         <div class="card">
-            <img src="https://via.placeholder.com/250x180" alt="Classic Japcake">
+            <img src="https://via.placeholder.com/250x180">
             <h3>Classic Vanilla</h3>
-            <p class="price">₱120 / box</p>
+            <p class="price">₱120</p>
+            <button onclick="addToCart('Classic Vanilla',120)">Add to Cart</button>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/250x180" alt="Matcha">
+            <img src="https://via.placeholder.com/250x180">
             <h3>Matcha Green Tea</h3>
-            <p class="price">₱150 / box</p>
+            <p class="price">₱150</p>
+            <button onclick="addToCart('Matcha Green Tea',150)">Add to Cart</button>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/250x180" alt="Chocolate">
+            <img src="https://via.placeholder.com/250x180">
             <h3>Choco Lava</h3>
-            <p class="price">₱140 / box</p>
+            <p class="price">₱140</p>
+            <button onclick="addToCart('Choco Lava',140)">Add to Cart</button>
         </div>
 
     </div>
 </section>
 
-<!-- GCASH QR SECTION -->
-<section class="gcash">
-    <h2>💙 Pay via GCash</h2>
-    <p>Scan the QR code below to pay your order.</p>
-
-    <!-- REPLACE gcash-qr.png with your real QR image -->
-    <img src="gcash-qr.png" alt="GCash QR Code">
-
-    <p><strong>GCash Name:</strong> Mr. Japcakes</p>
-    <p><strong>GCash Number:</strong> 0912-345-6789</p>
-    <p>After payment, please send screenshot via SMS or Messenger.</p>
+<section class="cart">
+    <h2>🛒 Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p class="total">Total: ₱<span id="total">0</span></p>
 </section>
 
-<section class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 0912-345-6789</p>
-    <p>📍 Tibiao, Antique</p>
-    <p>📩 mrjapcake@gmail.com</p>
+<section class="order-form">
+    <h2>Place Your Order</h2>
+    <input type="text" placeholder="Full Name" required><br>
+    <input type="text" placeholder="Contact Number" required><br>
+    <textarea placeholder="Delivery Address"></textarea><br>
+    <button onclick="submitOrder()">Submit Order</button>
+</section>
+
+<section class="gcash">
+    <h2>💙 Pay via GCash</h2>
+    <p>Scan QR to pay</p>
+    <img src="gcash-qr.png" alt="GCash QR">
+    <p><strong>GCash Name:</strong> Sakura Japcakes</p>
+    <p><strong>Number:</strong> 0912-345-6789</p>
+    <p>Send payment screenshot after order.</p>
+</section>
+
+<section class="admin">
+    <h2>🔐 Admin Inventory</h2>
+    <p>Update Stock (Manual Tracking)</p>
+    <input type="text" placeholder="Product Name">
+    <input type="number" placeholder="Stock">
+    <button onclick="alert('Stock Updated! (Demo Only)')">Update</button>
 </section>
 
 <footer>
-    © 2026 Sakura Japcakes | Made with ❤️ in the Philippines
+    © 2026 Sakura Japcakes | Made with ❤️ by Ryan
 </footer>
 
 <script>
-function orderNow(){
-    alert("To order, please contact 0912-345-6789 and send your payment via GCash.");
+let total = 0;
+let cart = [];
+
+function addToCart(product, price){
+    cart.push({product, price});
+    total += price;
+    displayCart();
+}
+
+function displayCart(){
+    let list = document.getElementById("cartItems");
+    list.innerHTML = "";
+    cart.forEach(item=>{
+        let li = document.createElement("li");
+        li.textContent = item.product + " - ₱" + item.price;
+        list.appendChild(li);
+    });
+    document.getElementById("total").textContent = total;
+}
+
+function submitOrder(){
+    if(cart.length === 0){
+        alert("Cart is empty!");
+        return;
+    }
+    alert("Order submitted! Please pay via GCash and send screenshot.");
+}
+
+/* Sakura Animation */
+for(let i=0;i<20;i++){
+    let sakura=document.createElement("div");
+    sakura.classList.add("sakura");
+    sakura.innerHTML="🌸";
+    sakura.style.left=Math.random()*100+"vw";
+    sakura.style.animationDuration=(5+Math.random()*5)+"s";
+    document.body.appendChild(sakura);
 }
 </script>
 

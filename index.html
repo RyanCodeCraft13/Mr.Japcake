@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. Japcakes</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#fff5f7;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(90deg,#ff758c,#ff7eb3);
+    padding:20px;
+    text-align:center;
+    color:white;
+}
+
+header h1{
+    font-size:40px;
+    font-weight:800;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero button{
+    padding:12px 25px;
+    background:#ff4f81;
+    border:none;
+    color:white;
+    font-weight:600;
+    border-radius:25px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#e63b6d;
+}
+
+/* PRODUCTS */
+.products{
+    padding:50px 20px;
+    text-align:center;
+}
+
+.product-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.price{
+    color:#ff4f81;
+    font-weight:600;
+}
+
+/* GCASH SECTION */
+.gcash{
+    background:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.gcash img{
+    width:250px;
+    margin:20px 0;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.gcash h2{
+    margin-bottom:15px;
+}
+
+/* CONTACT */
+.contact{
+    background:#ffe4ec;
+    padding:50px 20px;
+    text-align:center;
+}
+
+/* FOOTER */
+footer{
+    background:#ff758c;
+    text-align:center;
+    padding:15px;
+    color:white;
+}
+
+@media(max-width:768px){
+    .product-container{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🍡 Mr. Japcakes</h1>
+    <p>Soft • Fluffy • Authentic Japanese Inspired Cakes</p>
+</header>
+
+<section class="hero">
+    <h2>Experience the Taste of Japan 🇯🇵</h2>
+    <p>Freshly baked japcakes made with love.</p>
+    <button onclick="orderNow()">Order Now</button>
+</section>
+
+<section class="products">
+    <h2>Our Best Sellers</h2>
+    <div class="product-container">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/250x180" alt="Classic Japcake">
+            <h3>Classic Vanilla</h3>
+            <p class="price">₱120 / box</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/250x180" alt="Matcha">
+            <h3>Matcha Green Tea</h3>
+            <p class="price">₱150 / box</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/250x180" alt="Chocolate">
+            <h3>Choco Lava</h3>
+            <p class="price">₱140 / box</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- GCASH QR SECTION -->
+<section class="gcash">
+    <h2>💙 Pay via GCash</h2>
+    <p>Scan the QR code below to pay your order.</p>
+
+    <!-- REPLACE gcash-qr.png with your real QR image -->
+    <img src="gcash-qr.png" alt="GCash QR Code">
+
+    <p><strong>GCash Name:</strong> Mr. Japcakes</p>
+    <p><strong>GCash Number:</strong> 0912-345-6789</p>
+    <p>After payment, please send screenshot via SMS or Messenger.</p>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 0912-345-6789</p>
+    <p>📍 Tibiao, Antique</p>
+    <p>📩 mrjapcake@gmail.com</p>
+</section>
+
+<footer>
+    © 2026 Sakura Japcakes | Made with ❤️ in the Philippines
+</footer>
+
+<script>
+function orderNow(){
+    alert("To order, please contact 0912-345-6789 and send your payment via GCash.");
+}
+</script>
+
+</body>
+</html>
